@@ -20,19 +20,19 @@ st.sidebar.header("Filtros")
 # ====== Filtragem dos Dados ======
 # FILTRO -> Ano
 anos_disponiveis = sorted(df['ano'].unique())
-anos_selecionados = st.sidebar.multiselect("Ano", anos_disponiveis, default=anos_disponiveis)
+anos_selecionados = st.sidebar.multiselect("Ano", anos_disponiveis)
 
 # FILTRO -> Nível de Experiência
 xp_disponiveis = sorted(df['senioridade'].unique())
-xp_selecionados = st.sidebar.multiselect("Nível de Experiência", xp_disponiveis, default=xp_disponiveis)
+xp_selecionados = st.sidebar.multiselect("Nível de Experiência", xp_disponiveis)
 
 # FILTRO -> Contrato
 contrato_disponiveis = sorted(df['contrato'].unique())
-contrato_selecionados = st.sidebar.multiselect("Contrato", contrato_disponiveis,default=contrato_disponiveis)
+contrato_selecionados = st.sidebar.multiselect("Contrato", contrato_disponiveis)
 
 # FILTRO -> Tamanho da Empresa
 tamanho_disponiveis = sorted(df['tamanho_empresa'].unique())
-tamanho_selecionados = st.sidebar.multiselect("Tamanho da Empresa", tamanho_disponiveis, default=tamanho_disponiveis)
+tamanho_selecionados = st.sidebar.multiselect("Tamanho da Empresa", tamanho_disponiveis)
 
 # SELEÇÕES
 df_filtrado = df[
